@@ -35,6 +35,18 @@ export default function Locations() {
               </Link>
             ))}
           </div>
+
+          <div className="locations__venues-cta">
+            <p className="page__eyebrow">Featured Rooms</p>
+            <h2 className="locations__venues-title display">Venues We Know &amp; Love</h2>
+            <p className="locations__venues-blurb">
+              From the Peabody Library to the Four Seasons, see the specific rooms
+              we've built relationships with — and where we already know the load-in.
+            </p>
+            <Link to="/venues" className="btn btn-primary">
+              Explore Featured Venues
+            </Link>
+          </div>
         </div>
       </div>
     </>

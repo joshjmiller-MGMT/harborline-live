@@ -97,3 +97,22 @@
     grid-template-columns: 2fr 1fr;
   }
 }
+
+.venue-gallery {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+  margin-top: 2rem;
+}
+
+.venue-gallery img {
+  width: 100%;
+  border-radius: var(--radius);
+  border: 1px solid hsl(var(--border));
+}
+
+@media (min-width: 600px) {
+  .venue-gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+}

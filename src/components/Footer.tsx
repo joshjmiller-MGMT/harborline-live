@@ -6,6 +6,7 @@ const QUICK_LINKS = [
   { to: "/ensembles", label: "Ensembles" },
   { to: "/occasions", label: "Occasions" },
   { to: "/locations", label: "Where We Perform" },
+  { to: "/venues", label: "Venues We Know & Love" },
   { to: "/songs", label: "Songs" },
   { to: "/about", label: "About" },
   { to: "/faq", label: "FAQ" },

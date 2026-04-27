@@ -229,3 +229,27 @@ button {
   color: hsl(var(--muted-foreground));
   line-height: 1.6;
 }
+
+.locations__venues-cta {
+  text-align: center;
+  margin: 4.5rem auto 0;
+  padding: 3rem 2rem;
+  background: var(--gradient-dark);
+  border: 1px solid hsl(var(--purple) / 0.3);
+  border-radius: var(--radius);
+  max-width: 760px;
+}
+
+.locations__venues-title {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  letter-spacing: 0.06em;
+  margin: 0 0 0.75rem;
+  color: hsl(var(--cream));
+}
+
+.locations__venues-blurb {
+  margin: 0 auto 1.75rem;
+  color: hsl(var(--cream) / 0.85);
+  max-width: 560px;
+  line-height: 1.6;
+}

@@ -9,6 +9,8 @@ import Occasions from "./pages/Occasions";
 import OccasionPage from "./pages/OccasionPage";
 import Locations from "./pages/Locations";
 import LocationPage from "./pages/LocationPage";
+import Venues from "./pages/Venues";
+import VenuePage from "./pages/VenuePage";
 import Songs from "./pages/Songs";
 import Contact from "./pages/Contact";
 import FAQ from "./pages/FAQ";
@@ -29,6 +31,8 @@ export default function App() {
           <Route path="/occasions/:slug" element={<OccasionPage />} />
           <Route path="/locations" element={<Locations />} />
           <Route path="/locations/:slug" element={<LocationPage />} />
+          <Route path="/venues" element={<Venues />} />
+          <Route path="/venues/:slug" element={<VenuePage />} />
           <Route path="/songs" element={<Songs />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/faq" element={<FAQ />} />
