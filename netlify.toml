@@ -1,3 +1,8 @@
 [build]
   publish = "."
   command = ""
+
+# When the source rebuild is ready (Phase 4), switch to:
+# [build]
+#   publish = "dist"
+#   command = "npm run build"
