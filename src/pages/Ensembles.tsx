@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
 import SEO from "../components/SEO";
+import FadeInCard from "../components/FadeInCard";
 import { ENSEMBLES } from "../data/ensembles";
 
 export default function Ensembles() {
@@ -22,8 +22,8 @@ export default function Ensembles() {
           </div>
 
           <div className="card-grid card-grid--3">
-            {ENSEMBLES.map((e) => (
-              <Link key={e.slug} to={`/ensembles/${e.slug}`} className="entity-card">
+            {ENSEMBLES.map((e, i) => (
+              <FadeInCard key={e.slug} to={`/ensembles/${e.slug}`} index={i} className="entity-card">
                 <div className="entity-card__media">
                   <img src={e.image} alt={e.name} loading="lazy" />
                 </div>
@@ -32,7 +32,7 @@ export default function Ensembles() {
                   <p className="entity-card__tagline">{e.tagline}</p>
                   <p className="entity-card__desc">{e.description}</p>
                 </div>
-              </Link>
+              </FadeInCard>
             ))}
           </div>
         </div>

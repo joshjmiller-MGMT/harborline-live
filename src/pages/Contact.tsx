@@ -1,5 +1,6 @@
 import { Mail, Phone } from "lucide-react";
 import SEO from "../components/SEO";
+import LeadForm from "../components/LeadForm";
 
 export default function Contact() {
   return (
@@ -20,41 +21,15 @@ export default function Contact() {
             </p>
           </div>
 
-          <div
-            style={{
-              maxWidth: 560,
-              margin: "0 auto",
-              background: "hsl(var(--card))",
-              border: "1px solid hsl(var(--border))",
-              borderRadius: "var(--radius)",
-              padding: "2.5rem",
-              textAlign: "center",
-            }}
-          >
-            <p style={{ marginTop: 0, color: "hsl(var(--cream) / 0.85)" }}>
-              The full quote form is coming in Phase 4. For now, reach out directly:
-            </p>
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                gap: "0.75rem",
-                marginTop: "1.5rem",
-                alignItems: "center",
-              }}
-            >
-              <a
-                href="mailto:harborlineband@gmail.com"
-                className="btn btn-primary"
-                style={{ minWidth: 280, justifyContent: "center" }}
-              >
+          <LeadForm />
+
+          <div className="contact__direct">
+            <p>Prefer to reach out directly?</p>
+            <div className="contact__direct-row">
+              <a href="mailto:harborlineband@gmail.com" className="btn btn-outline">
                 <Mail size={16} /> harborlineband@gmail.com
               </a>
-              <a
-                href="tel:+14434052378"
-                className="btn btn-outline"
-                style={{ minWidth: 280, justifyContent: "center" }}
-              >
+              <a href="tel:+14434052378" className="btn btn-outline">
                 <Phone size={16} /> (443) 405-2378
               </a>
             </div>

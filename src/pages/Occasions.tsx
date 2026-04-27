@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
 import SEO from "../components/SEO";
+import FadeInCard from "../components/FadeInCard";
 import { OCCASIONS } from "../data/occasions";
 
 export default function Occasions() {
@@ -22,8 +22,8 @@ export default function Occasions() {
           </div>
 
           <div className="card-grid">
-            {OCCASIONS.map((o) => (
-              <Link key={o.slug} to={`/occasions/${o.slug}`} className="entity-card">
+            {OCCASIONS.map((o, i) => (
+              <FadeInCard key={o.slug} to={`/occasions/${o.slug}`} index={i} className="entity-card">
                 <div className="entity-card__media">
                   <img src={o.image} alt={o.name} loading="lazy" />
                 </div>
@@ -32,7 +32,7 @@ export default function Occasions() {
                   <p className="entity-card__tagline">{o.tagline}</p>
                   <p className="entity-card__desc">{o.description}</p>
                 </div>
-              </Link>
+              </FadeInCard>
             ))}
           </div>
         </div>

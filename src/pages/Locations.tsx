@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import SEO from "../components/SEO";
+import FadeInCard from "../components/FadeInCard";
 import { LOCATIONS } from "../data/locations";
 
 export default function Locations() {
@@ -22,8 +23,8 @@ export default function Locations() {
           </div>
 
           <div className="card-grid card-grid--3">
-            {LOCATIONS.map((l) => (
-              <Link key={l.slug} to={`/locations/${l.slug}`} className="entity-card">
+            {LOCATIONS.map((l, i) => (
+              <FadeInCard key={l.slug} to={`/locations/${l.slug}`} index={i} className="entity-card">
                 <div className="entity-card__media">
                   <img src={l.image} alt={l.name} loading="lazy" />
                 </div>
@@ -32,7 +33,7 @@ export default function Locations() {
                   <p className="entity-card__tagline">{l.tagline}</p>
                   <p className="entity-card__desc">{l.description}</p>
                 </div>
-              </Link>
+              </FadeInCard>
             ))}
           </div>
 
