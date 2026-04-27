@@ -4,8 +4,8 @@ import { Lock, Menu, X } from "lucide-react";
 import "./Navbar.css";
 
 const NAV_LINKS = [
-  { to: "/services", label: "Ensembles" },
-  { to: "/services", label: "Occasions" },
+  { to: "/ensembles", label: "Ensembles" },
+  { to: "/occasions", label: "Occasions" },
   { to: "/locations", label: "Where We Perform" },
   { to: "/songs", label: "Songs" },
   { to: "/about", label: "About" },

@@ -53,8 +53,8 @@ export default function Hero() {
           <Link to="/contact" className="btn btn-primary">
             Request a Quote
           </Link>
-          <a href="#see-us-perform" className="btn btn-outline">
-            See Us Perform
+          <a href="#see-us-live" className="btn btn-outline">
+            See Us Live
           </a>
         </motion.div>
       </div>

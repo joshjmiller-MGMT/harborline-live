@@ -1,8 +1,12 @@
 [build]
-  publish = "."
-  command = ""
+  publish = "dist"
+  command = "npm run build"
 
-# When the source rebuild is ready (Phase 4), switch to:
-# [build]
-#   publish = "dist"
-#   command = "npm run build"
+[build.environment]
+  NODE_VERSION = "20"
+
+# SPA fallback so /ensembles/full-band etc. resolve client-side
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

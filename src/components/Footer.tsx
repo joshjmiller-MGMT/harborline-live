@@ -3,12 +3,12 @@ import { Instagram, Facebook, Mail, Phone } from "lucide-react";
 import "./Footer.css";
 
 const QUICK_LINKS = [
-  { to: "/services", label: "Ensembles" },
+  { to: "/ensembles", label: "Ensembles" },
+  { to: "/occasions", label: "Occasions" },
   { to: "/locations", label: "Where We Perform" },
   { to: "/songs", label: "Songs" },
   { to: "/about", label: "About" },
   { to: "/faq", label: "FAQ" },
-  { to: "/contact", label: "Request a Quote" },
 ];
 
 export default function Footer() {
@@ -57,9 +57,9 @@ export default function Footer() {
           <h4 className="footer__heading display">Get in Touch</h4>
           <ul className="footer__list">
             <li>
-              <a href="mailto:info@harborlinemusic.com" className="footer__contact">
+              <a href="mailto:harborlineband@gmail.com" className="footer__contact">
                 <Mail size={16} />
-                info@harborlinemusic.com
+                harborlineband@gmail.com
               </a>
             </li>
             <li>

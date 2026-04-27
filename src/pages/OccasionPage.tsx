@@ -1,19 +1,19 @@
 import { Link, useParams } from "react-router-dom";
 import SEO from "../components/SEO";
-import { getLocationBySlug } from "../data/locations";
+import { getOccasionBySlug } from "../data/occasions";
 import "./DetailPage.css";
 
-export default function LocationPage() {
+export default function OccasionPage() {
   const { slug } = useParams();
-  const location = slug ? getLocationBySlug(slug) : undefined;
+  const occasion = slug ? getOccasionBySlug(slug) : undefined;
 
-  if (!location) {
+  if (!occasion) {
     return (
       <div className="page">
         <div className="container">
-          <h1 className="page__title">Location not found</h1>
+          <h1 className="page__title">Occasion not found</h1>
           <p>
-            <Link to="/locations">← Back to all locations</Link>
+            <Link to="/occasions">← Back to all occasions</Link>
           </p>
         </div>
       </div>
@@ -23,33 +23,33 @@ export default function LocationPage() {
   return (
     <>
       <SEO
-        title={`Live Music in ${location.name} | Harborline`}
-        description={location.description}
-        canonical={`https://harborlineband.com/locations/${location.slug}`}
+        title={`${occasion.name} | Harborline`}
+        description={occasion.description}
+        canonical={`https://harborlineband.com/occasions/${occasion.slug}`}
       />
       <div className="detail">
         <div
           className="detail__hero"
-          style={{ backgroundImage: `url(${location.image})` }}
+          style={{ backgroundImage: `url(${occasion.image})` }}
         >
           <div className="detail__hero-overlay" />
           <div className="container detail__hero-content">
-            <p className="page__eyebrow">{location.region}</p>
-            <h1 className="page__title">Live in {location.name}</h1>
-            <p className="detail__tagline">{location.tagline}</p>
+            <p className="page__eyebrow">Occasion</p>
+            <h1 className="page__title">{occasion.name}</h1>
+            <p className="detail__tagline">{occasion.tagline}</p>
           </div>
         </div>
 
         <div className="container detail__body">
           <div className="detail__copy">
-            {location.body.map((p, i) => (
+            {occasion.body.map((p, i) => (
               <p key={i}>{p}</p>
             ))}
           </div>
           <aside className="detail__aside">
-            <h3 className="detail__aside-heading display">Booking in {location.name}</h3>
+            <h3 className="detail__aside-heading display">Get Started</h3>
             <p style={{ color: "hsl(var(--cream) / 0.8)", marginTop: 0 }}>
-              Have a venue in mind? Tell us your date and we'll quote it cleanly.
+              Send us your date and venue — we'll come back with a clean proposal.
             </p>
             <Link to="/contact" className="btn btn-primary detail__cta">
               Request a Quote
