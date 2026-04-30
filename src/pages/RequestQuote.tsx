@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
-import LeadForm from "@/components/LeadForm";
 import { Mail, Phone, MapPin } from "lucide-react";
 
 const RequestQuotePage = () => {
@@ -74,7 +73,13 @@ const RequestQuotePage = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="overflow-visible"
             >
-              <LeadForm />
+              <iframe
+                src="https://forms.monday.com/forms/embed/cd9db9bdd36a0a870cc16f6d7cf06fda?r=use1"
+                width="100%"
+                height="2400"
+                style={{ border: 0, filter: 'invert(1) hue-rotate(180deg)' }}
+                title="Request a Quote Form"
+              />
             </motion.div>
           </div>
         </div>
